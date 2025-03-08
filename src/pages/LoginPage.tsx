@@ -1,22 +1,27 @@
-import React, { useState, useContext } from 'react';
-import { AuthContext } from '../contexts/AuthContext';
-import { useNavigate, Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from '../store/authSlice';
+import { AppDispatch, RootState } from '../store';
+import { ILoginRequest } from '../interfaces';
+import { Link, useNavigate } from 'react-router-dom';
 
-const Login: React.FC = () => {
-  const { login } = useContext(AuthContext);
-  const navigate = useNavigate();
-
+export const LoginPage: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const dispatch = useDispatch<AppDispatch>();
+  const navigate = useNavigate();
+
+  const { status, error } = useSelector((state: RootState) => state.auth);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    try {
-      await login(email, password);
-      navigate('/'); // Redirect to home upon successful login
-    } catch (err: any) {
-      setError('Login failed. Please check your credentials.');
+
+    const creds: ILoginRequest = { email, password };
+    const resultAction = await dispatch(login(creds));
+
+    // If login succeeded:
+    if (login.fulfilled.match(resultAction)) {
+      navigate('/'); 
     }
   };
 
@@ -41,5 +46,3 @@ const Login: React.FC = () => {
     </div>
   );
 };
-
-export default Login;

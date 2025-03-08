@@ -1,94 +1,89 @@
-/* Navbar container */
+
 .navbar {
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 16px;
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-  }
-  
-  /* Link styling */
-  .nav-link {
-    text-decoration: none;
-    color: #555;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 8px 16px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    transition: color 0.2s, border-bottom 0.2s;
-  }
-  
-  .nav-link:hover {
-    color: #007bff;
-  }
-  
-  .nav-link.active {
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
-  }
-  
-  /* Logout button styling */
-  .logout-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Main content container */
-  .main-content {
-    padding: 24px;
-    min-height: calc(100vh - 80px);
-    background-color: #f7f7f7;
-  }
-  
-  /* Auth container for Login/Signup */
-  .auth-container {
-    max-width: 400px;
-    margin: 40px auto;
-    padding: 24px;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  .auth-container h1 {
-    text-align: center;
-    margin-bottom: 16px;
-  }
-  
-  .auth-container form div {
-    margin-bottom: 16px;
-  }
-  
-  .auth-container label {
-    display: block;
-    margin-bottom: 4px;
-  }
-  
-  .auth-container input {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-  }
-  
-  .auth-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .auth-container button:hover {
-    background-color: #0056b3;
-  }
-  
-  .error-msg {
-    color: red;
-    text-align: center;
-    margin-bottom: 16px;
-  }
-  
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #555;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.nav-link.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.main-content {
+  padding: 24px;
+  min-height: calc(100vh - 80px);
+  background-color: #f7f7f7;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.auth-container h1 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.auth-container form div {
+  margin-bottom: 16px;
+}
+
+.auth-container label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  background-color: #0056b3;
+}
+
+.error-msg {
+  color: red;
+  text-align: center;
+  margin-bottom: 16px;
+}
